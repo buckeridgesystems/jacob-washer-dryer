@@ -47,7 +47,7 @@ Record the final palette:
 - **Ground:** `#FFFFFF` white (green `#367C2B` is allowed as a full-width band, with white text only)
 - **Text:** `#1A1A1A` near-black on white and on yellow; `#FFFFFF` on green
 - **Primary action:** `#FFDE00` yellow button with `#1A1A1A` text (13.0:1). Reserved for the text/call button. Sits on a green band, or has a 2px `#1A1A1A` border on white, because yellow vs white is only 1.34:1.
-- **Supporting (optional):** `#367C2B` green for headings, bands, and links (5.15:1 on white). `#2A5E21` dark green if a darker tone is needed (7.72:1 on white).
+- **Supporting (optional):** `#367C2B` green for headings, bands, and links (5.15:1 on white). `#2A5E21` dark green if a darker tone is needed (7.72:1 on white). `#EDF4EB` pale green tint, used only as an alternating section background (ink 15.5:1, dark green 6.9:1 on it). Added in the polish pass.
 - **Source:** client brand, "John Deere green and yellow". Hex values are the commonly published approximations, not from a brand file. Confirm or replace.
 
 Contrast checks (WCAG ratios):
@@ -112,6 +112,10 @@ Show this to Hunter, then build.
 ### Step 6: Before handing back
 
 - [ ] Every Part 2 rule checked, with any exceptions listed and explained
+  - **Exception, Part 2 §3 (no scroll-triggered animation):** the sticky header slides away on scroll down and returns on scroll up (`js/header.js`, 0.2s, disabled under `prefers-reduced-motion`, visible without JavaScript). Requested by Hunter.
+  - **Exception, Part 2 §6 (contrast):** the header's yellow bottom border is decorative, not text or a control, and is 1.34:1 against white. Intentional.
+  - **Exception, Part 2 §2 (no themed decoration):** the "Included" list uses a small washing-machine icon as its bullet, an authored SVG in the dark green. Requested by Hunter.
+  - **Open:** nav links About, Services, and Contact point to `about.html`, `services.html`, and `contact.html`, which don't exist yet (404 until built).
 - [ ] Screenshots at 360px, 390px, 576px, 768px, 992px, 1200px, and 1440px
 - [ ] Every placeholder listed for Hunter
 - [ ] Every stock photo listed with its source, and marked for replacement before delivery

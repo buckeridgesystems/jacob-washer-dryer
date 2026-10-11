@@ -16,16 +16,23 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="star" viewBox="0 0 20 20"><polygon points="10,1 12.9,7 19.5,7.8 14.6,12.3 15.9,18.8 10,15.6 4.1,18.8 5.4,12.3 0.5,7.8 7.1,7"/></symbol></svg>
 
-<header class="bar">
-  <div class="wrap">
-    <a class="name" href="/">Gammill Global</a>
+<header class="site-header">
+  <div class="wrap header-grid">
+    <a class="brand" href="/"><span class="mark" aria-hidden="true">G</span><span class="name">Gammill Global</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
     <a class="tel" href="sms:+17195550100">(719) 555-0100</a>
   </div>
 </header>
 
 <main>
-  <section class="hero wrap" aria-labelledby="hero-title">
+<div class="top">
+<section class="hero wrap" aria-labelledby="hero-title">
     <div class="hero-copy">
       <h1 id="hero-title">Washer and dryer rentals in Colorado Springs</h1>
       <p class="lede">Used washers and dryers, rented month to month. Free delivery and installation in Colorado Springs.</p>
@@ -36,26 +43,24 @@
          width="720" height="960"
          alt="Rows of washers and dryers in a garage"
          fetchpriority="high">
-  </section>
+</section>
+</div>
 
   <section class="section" id="pricing" aria-labelledby="pricing-title">
     <div class="wrap">
       <h2 id="pricing-title">Rental prices</h2>
       <div class="cols">
-        <div>
-          <h3>Monthly price</h3>
-          <dl class="prices">
-            <div class="price-row">
-              <dt>Washer and dryer set</dt>
-              <dd>$50 <span>a month</span></dd>
-            </div>
-            <div class="price-row">
-              <dt>Washer or dryer alone</dt>
-              <dd>$35 <span>a month</span></dd>
-            </div>
+        <div class="tiles">
+          <dl class="tile price">
+            <dt>Washer and dryer set</dt>
+            <dd><span class="amount">$50</span> <span class="per">a month</span></dd>
+          </dl>
+          <dl class="tile price">
+            <dt>Washer or dryer alone</dt>
+            <dd><span class="amount">$35</span> <span class="per">a month</span></dd>
           </dl>
         </div>
-        <div>
+        <div class="tile">
           <h3>Included</h3>
           <ul class="list">
             <li>Delivery and installation, free in Colorado Springs</li>
@@ -69,7 +74,7 @@
     </div>
   </section>
 
-  <section class="section" id="machines" aria-labelledby="machines-title">
+  <section class="section section--tint" id="machines" aria-labelledby="machines-title">
     <div class="wrap">
       <h2 id="machines-title">Our machines</h2>
       <div class="gallery">
@@ -93,13 +98,15 @@
     <div class="wrap">
       <h2 id="reviews-title">What customers say</h2>
       <div class="reviews">
-        <figure class="review">
+        <figure class="tile review">
+          <svg class="stars" viewBox="0 0 120 20" aria-hidden="true"><use href="#star" x="0" width="20" height="20"/><use href="#star" x="25" width="20" height="20"/><use href="#star" x="50" width="20" height="20"/><use href="#star" x="75" width="20" height="20"/><use href="#star" x="100" width="20" height="20"/></svg>
           <blockquote>
             <p>Great rate and reliable, love the southern hospitality him and his wife are wonderful. I definitely would recommend ya'll renting or buying from them. DON'T WAIT BOOK TODAY AND GET INSTALLED TODAY</p>
           </blockquote>
           <footer><strong>DeeTha</strong>, July 30, 2026. 5 stars on Facebook</footer>
         </figure>
-        <figure class="review">
+        <figure class="tile review">
+          <svg class="stars" viewBox="0 0 120 20" aria-hidden="true"><use href="#star" x="0" width="20" height="20"/><use href="#star" x="25" width="20" height="20"/><use href="#star" x="50" width="20" height="20"/><use href="#star" x="75" width="20" height="20"/><use href="#star" x="100" width="20" height="20"/></svg>
           <blockquote>
             <p>Honest and accurate</p>
           </blockquote>
@@ -109,10 +116,20 @@
     </div>
   </section>
 
-  <section class="section" id="area" aria-labelledby="area-title">
+  <section class="section section--tint" id="area" aria-labelledby="area-title">
     <div class="wrap">
       <h2 id="area-title">Service area</h2>
-      <p>We serve Colorado Springs and the surrounding area. Delivery and installation are free in Colorado Springs. Delivery outside the city is $50.</p>
+      <p class="area-lede">We serve Colorado Springs and the surrounding area.</p>
+      <div class="tiles tiles--two">
+        <div class="tile">
+          <h3>In Colorado Springs</h3>
+          <p>Delivery and installation are free.</p>
+        </div>
+        <div class="tile">
+          <h3>Outside Colorado Springs</h3>
+          <p>Delivery is $50.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -136,5 +153,6 @@
   </div>
 </footer>
 
+<script src="js/header.js" defer></script>
 </body>
 </html>
