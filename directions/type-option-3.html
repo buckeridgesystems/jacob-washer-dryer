@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Type option 3: Source Serif 4 + Source Sans 3 | Gammill Global</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@700&family=Source+Sans+3:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  /* Breakpoints (min-width): sm 576, md 768, lg 992, xl 1200, xxl 1400 */
+  :root {
+    --green: #367C2B; --green-dark: #2A5E21; --yellow: #FFDE00; --ink: #1A1A1A; --white: #FFFFFF;
+    --s1: 8px; --s2: 16px; --s3: 24px; --s4: 40px; --s5: 64px; --s6: 104px;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 400 1.0625rem/1.55 "Source Sans 3", system-ui, sans-serif; color: var(--ink); background: var(--white); }
+  a { color: var(--green-dark); }
+  .bar { background: var(--green); color: var(--white); }
+  .bar-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--s2); max-width: 80rem; margin: 0 auto; padding: var(--s1) var(--s2); }
+  .name { font-weight: 700; font-size: 1.125rem; color: var(--white); text-decoration: none; }
+  .tel { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: var(--white); }
+  .grid { display: grid; grid-template-columns: 1fr; gap: var(--s4); max-width: 80rem; margin: 0 auto; padding: var(--s4) var(--s2) var(--s5); }
+  h1 { font-family: "Source Serif 4", system-ui, serif; font-weight: 700; font-size: clamp(2rem, 4vw + 0.75rem, 3.5rem); line-height: 1.08; margin: 0 0 var(--s2); }
+  .lede { font-size: 1.1875rem; margin: 0 0 var(--s3); }
+  .btn { display: inline-flex; align-items: center; min-height: 56px; padding: var(--s2) var(--s4); background: var(--yellow); color: var(--ink); border: 2px solid var(--ink); font: 800 1.25rem/1.2 "Source Sans 3", system-ui, sans-serif; text-decoration: none; }
+  .btn:hover { background: var(--white); }
+  .btn:active { background: var(--ink); color: var(--yellow); }
+  .btn:focus-visible, a:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+  .alt { margin: var(--s3) 0 0; }
+  .alt a { font-weight: 700; }
+  /* Neutral labeled placeholder. Replace with the client's real photo, fixed 4:3. */
+  .photo { aspect-ratio: 4 / 3; width: 100%; background: #E4E4E4; color: #333; display: flex; align-items: center; justify-content: center; text-align: center; padding: var(--s3); font-weight: 600; border: 2px dashed #777; }
+  @media (min-width: 992px) {
+    .grid { grid-template-columns: 5fr 7fr; align-items: center; gap: var(--s5); padding: var(--s5) var(--s3) var(--s6); }
+    .bar-inner { padding: var(--s1) var(--s3); }
+  }
+</style>
+</head>
+<body>
+<!-- review-nav -->
+<div style="background:#1A1A1A;color:#fff;font:14px/1.4 system-ui,sans-serif;padding:8px 16px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="margin-right:8px">REVIEW ONLY, remove before build:</span><a href="direction-a.html" style="color:#fff;padding:4px 8px">Direction A</a> <a href="direction-b.html" style="color:#fff;padding:4px 8px">Direction B</a> <a href="direction-c.html" style="color:#fff;padding:4px 8px">Direction C</a> <a href="type-option-1.html" style="color:#fff;padding:4px 8px">Type 1 Plex</a> <a href="type-option-2.html" style="color:#fff;padding:4px 8px">Type 2 Archivo</a> <b style="background:#FFDE00;color:#1A1A1A;padding:4px 8px">Type 3 Source</b></div>
+<!-- /review-nav -->
+  <header class="bar">
+    <div class="bar-inner">
+      <a class="name" href="#">Gammill Global</a>
+      <a class="tel" href="tel:+17195550100">(719) 555-0100</a>
+    </div>
+  </header>
+  <main class="grid">
+    <div>
+      <h1>Washer and dryer rentals in Colorado Springs</h1>
+      <p class="lede">Used washers and dryers for rent. Text to ask what is available.</p>
+      <a class="btn" href="sms:+17195550100?&body=Hi%2C%20I%27d%20like%20to%20rent%20a%20washer%20and%20dryer.">Text us</a>
+      <p class="alt">Or call <a href="tel:+17195550100">(719) 555-0100</a></p>
+    </div>
+    <div class="photo" role="img" aria-label="Photo placeholder">[PHOTO: a washer and dryer the client has available]</div>
+  </main>
+  <p style="max-width:80rem;margin:0 auto;padding:0 16px 24px;font-size:0.9375rem;color:#444">Option 3: Source Serif 4 700 for headings, Source Sans 3 for body and buttons (400, 600, 800). SIL OFL, Google Fonts.</p>
+</body>
+</html>

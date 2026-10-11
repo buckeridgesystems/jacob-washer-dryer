@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "monotonous-spacing",
+        "value": "*",
+        "files": [
+          "directions/direction-b.html"
+        ],
+        "createdAt": "2026-10-11T18:15:23.059Z",
+        "reason": "Claude: 8 of 10 spacing values counted are the 4px gaps/padding in the throwaway review-nav bar; the page's own spacing uses the 8/16/24/40/64/104 scale. Direction B is a non-chosen draft and the bar is removed at build."
+      }
+    ]
+  }
+}

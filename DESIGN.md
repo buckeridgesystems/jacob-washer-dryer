@@ -15,14 +15,19 @@ Claude Code: read the whole file before starting. Work through Part 1 in order, 
 
 Ask Hunter for anything missing here before going further.
 
-- **Business name:**
-- **What they do (one sentence):**
-- **Service area:**
-- **Primary visitor:** (who arrives, on what device, in what situation)
-- **Primary action:** (call / quote request / booking / visit)
-- **Tier:** (Starter Presence / Growth Engine / Full Stack Partner)
-- **Real assets supplied:** (logo, photos, reviews, licenses, hours)
-- **Missing assets:**
+- **Business name:** Gammill Global (placeholder until the owner confirms the real name; find and replace site-wide)
+- **What they do (one sentence):** Rents used washers and dryers month to month, and delivers, installs, and maintains the machines he rents out. (Delivery confirmed from his Marketplace listings.)
+- **Service area:** Greater Colorado Springs, CO, within about a 30-minute drive. Do not name the exact origin address or street.
+- **Primary visitor:** Someone in the Colorado Springs area who needs to rent a washer and dryer, arriving on a phone. Currently finds the owner through Facebook Marketplace.
+- **Primary action:** Text (call also works). No form. Needs information and a quick way to reach him.
+- **Tier:** Foundation (just the site). Note: not one of the template tiers; confirm which it maps to.
+- **Real assets supplied:** Photos of his machines from Marketplace listings (`assets/photos/`), prices and terms copied from his listings ($50/month set, $35/month single unit, free delivery and install in Colorado Springs, no credit check, month to month), and two real Facebook reviews (DeeTha, July 30, 2026; Mikel, February 16, 2026). Everything else is filler.
+- **Missing assets:** Logo, real business name, photos of the machines, real phone number, hours, reviews, rental pricing and terms, delivery and install details, license or insurance info if any.
+
+**Notes from Hunter:**
+- Machines are used, mostly Whirlpool, but brand is not a selling point. Don't feature it.
+- Owner rents only his own machines. He does not repair other people's machines, so don't imply repair for the public.
+- Phone number is a dummy (`555-01xx` range) until the owner supplies a real one.
 
 ### Step 2: Brand colors (stop and ask)
 
@@ -39,11 +44,26 @@ Then:
 
 Record the final palette:
 
-- **Ground:**
-- **Text:**
-- **Primary action:**
-- **Supporting (optional):**
-- **Source:** (client brand / adjusted from client brand / proposed and chosen)
+- **Ground:** `#FFFFFF` white (green `#367C2B` is allowed as a full-width band, with white text only)
+- **Text:** `#1A1A1A` near-black on white and on yellow; `#FFFFFF` on green
+- **Primary action:** `#FFDE00` yellow button with `#1A1A1A` text (13.0:1). Reserved for the text/call button. Sits on a green band, or has a 2px `#1A1A1A` border on white, because yellow vs white is only 1.34:1.
+- **Supporting (optional):** `#367C2B` green for headings, bands, and links (5.15:1 on white). `#2A5E21` dark green if a darker tone is needed (7.72:1 on white).
+- **Source:** client brand, "John Deere green and yellow". Hex values are the commonly published approximations, not from a brand file. Confirm or replace.
+
+Contrast checks (WCAG ratios):
+
+| Pair | Ratio | Result |
+|---|---|---|
+| `#FFFFFF` on `#367C2B` | 5.15 | Pass |
+| `#367C2B` on `#FFFFFF` | 5.15 | Pass |
+| `#1A1A1A` on `#FFDE00` | 13.01 | Pass |
+| `#FFDE00` on `#2A5E21` | 5.77 | Pass |
+| `#FFDE00` on `#367C2B` | 3.85 | **Fails 4.5 as text.** OK only for large text (24px+) or non-text UI. |
+| `#367C2B` on `#FFDE00` | 3.85 | **Fails 4.5 as text.** Use `#1A1A1A` on yellow instead. |
+| `#1A1A1A` on `#367C2B` | 3.38 | **Fails.** Use white on green. |
+| `#FFDE00` on `#FFFFFF` | 1.34 | **Fails.** Never use yellow as text or a borderless shape on white. |
+
+Trademark note: use the colors only. No John Deere name, logo, leaping deer, or "Nothing Runs Like" phrasing anywhere on the site.
 
 ### Step 3: Type (stop and ask)
 
@@ -58,7 +78,7 @@ Make the options clearly different from each other, for example: a sturdy sans, 
 
 **Stop and wait for Hunter to pick one.**
 
-- **Type picked:**
+- **Type picked:** Public Sans, one family, confirmed by Hunter ("leave the original in"). Hunter first called it too casual, was shown three alternatives in direction C (`directions/type-option-1.html` IBM Plex Sans, `type-option-2.html` Archivo, `type-option-3.html` Source Serif 4 with Source Sans 3), then chose to keep Public Sans. Details: 800 for headings, 600 for subheadings and buttons, 400 for body. Body 17px, line height 1.55, measure capped at 65ch. Google Fonts, SIL Open Font License. Self-host woff2 in `/fonts` with the license for the final build. Chosen by Claude at Hunter's direction ("pick one that makes sense"); only one option was rendered. Specimen: `specimen-type.html`.
 
 ### Step 4: Directions (stop and ask)
 
@@ -69,15 +89,23 @@ Using the chosen colors and type, propose **three layout directions that are cle
 
 Don't build any pages yet. **Stop and wait for Hunter to pick one or ask for changes.**
 
-- **Direction picked:**
-- **Spacing scale:**
-- **The one distinctive idea (if any) and where it comes from:**
+- **Direction picked:** C, photo-led. Green header bar, headline and button on the left, 4:3 photo on the right (below the button on phones). Mockup: `directions/direction-c.html`.
+- **Spacing scale:** 8, 16, 24, 40, 64, 104
+- **The one distinctive idea (if any) and where it comes from:** None. The text button opens a message with "Hi, I'd like to rent a washer and dryer" pre-filled, a convenience that comes from his text-first way of getting customers.
 
 ### Step 5: Page plan
 
-- **Pages:**
+- **Pages:** Home (one page). Privacy (short, required by the footer rule; placeholder text until the owner supplies policy wording).
 - **Homepage section order, with the purpose of each section:**
-- **Form fields:**
+  1. **Header bar:** business name and tappable phone number, so the number is always visible.
+  2. **First screen (direction C):** headline, "Text us" button with pre-filled message, call link, photo. Purpose: let someone text in under five seconds.
+  3. **Rental prices:** $50 set, $35 single unit, plus what is included. Purpose: answer the first question people ask. The old "What we do" list was folded into the Included list.
+  4. **Our machines:** three real photos (washer, dryer, garage stock). Hunter does not want an "available" list, so no inventory claims.
+  5. **Reviews:** two real Facebook reviews, verbatim.
+  6. **Service area:** Colorado Springs and the surrounding area; free delivery in the city, $50 outside (see open items).
+  7. **Closing text/call:** the same button and number, plus `[HOURS]`. Purpose: the final prompt after reading.
+  8. **Footer:** name, phone, service area, hours, privacy link. Nothing decorative.
+- **Form fields:** None. The primary action is a tap-to-text link (`sms:`) with call as the second option, as Hunter specified.
 
 Show this to Hunter, then build.
 

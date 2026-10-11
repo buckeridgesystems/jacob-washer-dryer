@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Type specimen: Gammill Global</title>
+<!-- Draft specimen only. Google Fonts link is fine for drafts; self-host woff2 in /fonts for the final build. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #367C2B;
+    --green-dark: #2A5E21;
+    --yellow: #FFDE00;
+    --ink: #1A1A1A;
+    --white: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Public Sans", system-ui, sans-serif;
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.55;
+    color: var(--ink);
+    background: var(--white);
+  }
+  .band { background: var(--green); color: var(--white); padding: 64px 16px; }
+  .wrap { max-width: 44rem; margin: 0 auto; }
+  h1 {
+    font-size: clamp(2.25rem, 7vw, 3.5rem);
+    line-height: 1.05;
+    font-weight: 800;
+    margin: 0 0 16px;
+  }
+  .sub { font-size: 1.375rem; font-weight: 600; margin: 0 0 24px; }
+  .btn {
+    display: inline-block;
+    min-height: 48px;
+    padding: 12px 24px;
+    background: var(--yellow);
+    color: var(--ink);
+    font: 800 1.125rem/1.5 "Public Sans", system-ui, sans-serif;
+    text-decoration: none;
+    border: 2px solid var(--ink);
+  }
+  .btn:hover { background: var(--white); }
+  .btn:focus-visible { outline: 3px solid var(--white); outline-offset: 3px; }
+  .body { padding: 64px 16px; }
+  h2 { font-size: 1.75rem; line-height: 1.2; font-weight: 800; color: var(--green); margin: 0 0 16px; }
+  p { max-width: 65ch; margin: 0 0 24px; }
+  .phone { font-size: 1.5rem; font-weight: 800; }
+  .phone a { color: var(--green-dark); }
+  .note { font-size: 0.9375rem; color: #444; }
+</style>
+</head>
+<body>
+  <header class="band">
+    <div class="wrap">
+      <h1>Gammill Global</h1>
+      <p class="sub">Washer and dryer rentals in Colorado Springs</p>
+      <a class="btn" href="sms:+17195550100">Text us</a>
+    </div>
+  </header>
+  <main class="body">
+    <div class="wrap">
+      <h2>What we do</h2>
+      <p>We rent used washers and dryers. We install them and service the machines we rent out. Text us to ask what is available.</p>
+      <p class="phone">Text or call <a href="tel:+17195550100">(719) 555-0100</a> [PHONE NUMBER]</p>
+      <p class="note">Public Sans: 800 headings, 600 subheadings, 400 body. SIL Open Font License, Google Fonts.</p>
+    </div>
+  </main>
+</body>
+</html>

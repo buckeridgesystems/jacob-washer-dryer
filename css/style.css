@@ -1,0 +1,193 @@
+/*
+  Gammill Global. Mobile-first: base rules are the phone layout.
+  Breakpoints (min-width), used as literals because media queries can't read custom properties:
+    sm 576px | md 768px | lg 992px | xl 1200px | xxl 1400px
+*/
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/public-sans-latin-800-normal.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --green: #367C2B;
+  --green-dark: #2A5E21;
+  --yellow: #FFDE00;
+  --ink: #1A1A1A;
+  --muted: #444444;
+  --white: #FFFFFF;
+  --placeholder: #E4E4E4;
+
+  /* Spacing scale */
+  --s1: 8px;
+  --s2: 16px;
+  --s3: 24px;
+  --s4: 40px;
+  --s5: 64px;
+  --s6: 104px;
+
+  --measure: 65ch;
+  --wrap: 80rem;
+  --font: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; accent-color: var(--green); }
+
+body {
+  margin: 0;
+  font: 400 1.0625rem/1.55 var(--font);
+  color: var(--ink);
+  background: var(--white);
+}
+
+::selection { background: var(--yellow); color: var(--ink); }
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: var(--green-dark); text-underline-offset: 0.2em; }
+a:hover { color: var(--ink); }
+a:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+
+h1, h2, p, ul, dl, dd, figure, blockquote { margin: 0; }
+
+h1 {
+  font-size: clamp(2rem, 4vw + 0.75rem, 3.5rem);
+  line-height: 1.08;
+  font-weight: 800;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 2vw + 1.1rem, 2.25rem);
+  line-height: 1.15;
+  font-weight: 800;
+  color: var(--green-dark);
+  text-wrap: balance;
+}
+
+p { max-width: var(--measure); }
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: var(--s2); padding-right: var(--s2); }
+
+/* ---------- Header ---------- */
+.bar { background: var(--green); color: var(--white); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: var(--s2); padding-top: var(--s1); padding-bottom: var(--s1); }
+.bar a { color: var(--white); }
+.bar a:hover { color: var(--yellow); }
+.bar a:focus-visible { outline-color: var(--white); }
+.name { font-weight: 800; font-size: 1.125rem; text-decoration: none; }
+.tel { display: inline-flex; align-items: center; min-height: 44px; font-weight: 800; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: var(--s2) var(--s4);
+  background: var(--yellow);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  font: 800 1.25rem/1.2 var(--font);
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover { background: var(--white); color: var(--ink); }
+.btn:active { background: var(--ink); color: var(--yellow); }
+.btn:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+.btn[aria-disabled="true"] { background: var(--placeholder); color: var(--muted); border-color: var(--muted); cursor: not-allowed; }
+
+/* ---------- Hero ---------- */
+.hero { display: grid; gap: var(--s4); padding-top: var(--s4); padding-bottom: var(--s5); }
+.hero-copy { display: grid; align-content: center; gap: var(--s2); justify-items: start; }
+.lede { font-size: 1.1875rem; }
+.hero .btn { margin-top: var(--s1); }
+.hero-photo { width: 100%; max-width: 28rem; height: auto; background: var(--placeholder); }
+
+/* ---------- Sections ---------- */
+.section { padding-top: var(--s5); padding-bottom: var(--s5); }
+.section > .wrap > h2 { margin-bottom: var(--s3); }
+
+/* Prices and included list */
+.cols { display: grid; gap: var(--s5); }
+.list { list-style: none; padding: 0; display: grid; gap: var(--s2); }
+.list li { font-size: 1.1875rem; font-weight: 600; }
+.prices { display: grid; gap: var(--s3); }
+.price-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--s1) var(--s2); }
+.price-row dt { font-size: 1.1875rem; font-weight: 600; }
+.price-row dd { font-size: 1.75rem; font-weight: 800; color: var(--green-dark); }
+.price-row dd span { font-size: 1.0625rem; font-weight: 400; color: var(--ink); }
+.cols h3 { margin: 0 0 var(--s2); font-size: 1.1875rem; font-weight: 800; }
+
+/* Photos */
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s2); }
+.gallery figure:last-child { grid-column: 1 / -1; }
+.gallery img { width: 100%; height: auto; background: var(--placeholder); }
+.gallery figcaption { margin-top: var(--s1); font-size: 0.9375rem; color: var(--muted); }
+
+/* Reviews */
+.reviews { display: grid; gap: var(--s4); }
+.review p { font-size: 1.125rem; }
+.review footer { margin-top: var(--s2); font-size: 0.9375rem; color: var(--muted); }
+.review footer strong { color: var(--ink); }
+
+/* Closing call to act */
+.cta { background: var(--green); color: var(--white); padding-top: var(--s5); padding-bottom: var(--s5); }
+.cta h2 { color: var(--white); }
+.cta .wrap { display: grid; gap: var(--s2); justify-items: start; }
+.cta a:not(.btn) { color: var(--white); font-weight: 800; }
+.cta a:not(.btn):hover { color: var(--yellow); }
+.cta a:focus-visible { outline-color: var(--white); }
+.cta .btn:hover { color: var(--ink); }
+
+/* ---------- Footer ---------- */
+.site-footer { padding-top: var(--s5); padding-bottom: var(--s5); }
+.site-footer .wrap { display: grid; gap: var(--s3); }
+.site-footer p { font-size: 1rem; }
+.site-footer strong { display: block; }
+
+/* ---------- Text pages ---------- */
+.prose { padding-top: var(--s5); padding-bottom: var(--s5); }
+.prose h1 { margin-bottom: var(--s3); }
+.prose p { margin-bottom: var(--s2); }
+
+/* ---------- Breakpoints ---------- */
+@media (min-width: 576px) {
+  .wrap { padding-left: var(--s3); padding-right: var(--s3); }
+}
+
+@media (min-width: 768px) {
+  /* 9:9:16 keeps a portrait, a portrait, and a 4:3 landscape photo at the same height */
+  .gallery { grid-template-columns: 9fr 9fr 16fr; }
+  .gallery figure:last-child { grid-column: auto; }
+  .reviews { grid-template-columns: repeat(2, 1fr); gap: var(--s5); }
+  .site-footer .wrap { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 992px) {
+  .hero { grid-template-columns: 1fr 26rem; align-items: center; gap: var(--s5); padding-top: var(--s5); padding-bottom: var(--s6); }
+  .hero-photo { justify-self: end; }
+  .section { padding-top: var(--s6); padding-bottom: var(--s6); }
+  .cols { grid-template-columns: 1fr 1fr; gap: var(--s6); }
+  .cta { padding-top: var(--s6); padding-bottom: var(--s6); }
+  .site-footer .wrap { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+}

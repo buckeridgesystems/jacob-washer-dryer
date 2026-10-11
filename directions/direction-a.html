@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction A: Plain and direct | Gammill Global</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  /* Breakpoints (min-width): sm 576, md 768, lg 992, xl 1200, xxl 1400 */
+  :root {
+    --green: #367C2B; --green-dark: #2A5E21; --yellow: #FFDE00; --ink: #1A1A1A; --white: #FFFFFF;
+    --s1: 8px; --s2: 16px; --s3: 24px; --s4: 40px; --s5: 64px; --s6: 104px;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 400 1.0625rem/1.55 "Public Sans", system-ui, sans-serif; color: var(--ink); background: var(--white); }
+  a { color: var(--green-dark); }
+  .top { border-bottom: 4px solid var(--green); }
+  .top-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--s2); max-width: 72rem; margin: 0 auto; padding: var(--s2); }
+  .name { font-weight: 800; font-size: 1.125rem; color: var(--ink); text-decoration: none; }
+  .tel { display: inline-flex; align-items: center; min-height: 44px; font-weight: 800; color: var(--green-dark); }
+  main { max-width: 72rem; margin: 0 auto; padding: var(--s4) var(--s2) var(--s5); }
+  h1 { font-weight: 800; font-size: clamp(2.25rem, 6vw + 0.5rem, 4.5rem); line-height: 1.05; margin: 0 0 var(--s3); max-width: 14em; }
+  .lede { font-size: 1.25rem; max-width: 36rem; margin: 0 0 var(--s4); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: var(--s2) var(--s4); background: var(--yellow); color: var(--ink); border: 2px solid var(--ink); font: 800 1.25rem/1.2 "Public Sans", system-ui, sans-serif; text-decoration: none; }
+  .btn:hover { background: var(--white); }
+  .btn:active { background: var(--ink); color: var(--yellow); }
+  .btn:focus-visible, a:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+  .alt { margin: var(--s3) 0 0; }
+  .alt a { font-weight: 800; }
+  @media (min-width: 768px) { main { padding: var(--s5) var(--s3) var(--s6); } .top-inner { padding: var(--s2) var(--s3); } }
+</style>
+</head>
+<body>
+<!-- review-nav -->
+<div style="background:#1A1A1A;color:#fff;font:14px/1.4 system-ui,sans-serif;padding:8px 16px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="margin-right:8px">REVIEW ONLY, remove before build:</span><b style="background:#FFDE00;color:#1A1A1A;padding:4px 8px">Direction A</b> <a href="direction-b.html" style="color:#fff;padding:4px 8px">Direction B</a> <a href="direction-c.html" style="color:#fff;padding:4px 8px">Direction C</a> <a href="type-option-1.html" style="color:#fff;padding:4px 8px">Type 1 Plex</a> <a href="type-option-2.html" style="color:#fff;padding:4px 8px">Type 2 Archivo</a> <a href="type-option-3.html" style="color:#fff;padding:4px 8px">Type 3 Source</a></div>
+<!-- /review-nav -->
+  <header class="top">
+    <div class="top-inner">
+      <a class="name" href="#">Gammill Global</a>
+      <a class="tel" href="tel:+17195550100">(719) 555-0100</a>
+    </div>
+  </header>
+  <main>
+    <h1>Washer and dryer rentals in Colorado Springs</h1>
+    <p class="lede">Used washers and dryers for rent. We install them and service the machines we rent out. Text to ask what is available.</p>
+    <a class="btn" href="sms:+17195550100?&body=Hi%2C%20I%27d%20like%20to%20rent%20a%20washer%20and%20dryer.">Text us</a>
+    <p class="alt">Prefer to talk? <a href="tel:+17195550100">Call (719) 555-0100</a></p>
+  </main>
+</body>
+</html>
