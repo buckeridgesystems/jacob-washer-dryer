@@ -115,7 +115,7 @@ Show this to Hunter, then build.
   - **Exception, Part 2 §3 (no scroll-triggered animation):** the sticky header slides away on scroll down and returns on scroll up (`js/header.js`, 0.2s, disabled under `prefers-reduced-motion`, visible without JavaScript). Requested by Hunter.
   - **Exception, Part 2 §6 (contrast):** the header's yellow bottom border is decorative, not text or a control, and is 1.34:1 against white. Intentional.
   - **Exception, Part 2 §2 (no themed decoration):** the "Included" list uses a small washing-machine icon as its bullet, an authored SVG in the dark green. Requested by Hunter.
-  - **Open:** nav links About, Services, and Contact point to `about.html`, `services.html`, and `contact.html`, which don't exist yet (404 until built).
+  - **Built:** About, Services, and Contact pages exist and share the header, hero band, tiles, photo mat, washer bullets, and closing band with the home page. Open placeholders on them: `[OWNER NAME]`, `[OWNER STORY]`, `[HOURS]`.
 - [ ] Screenshots at 360px, 390px, 576px, 768px, 992px, 1200px, and 1440px
 - [ ] Every placeholder listed for Hunter
 - [ ] Every stock photo listed with its source, and marked for replacement before delivery
