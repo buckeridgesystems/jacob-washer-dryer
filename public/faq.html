@@ -3,10 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Washer and Dryer Rental FAQ | Gammill Global</title>
-<meta name="description" content="Answers about renting a washer and dryer in Colorado Springs: price, delivery and installation, credit check, and service area.">
+<title>Washer and Dryer Rental FAQ | Purely Global</title>
+<meta name="description" content="Answers about renting a washer and dryer in Colorado Springs: price, the 4-month minimum, the $50 deposit, billing, contract, and delivery.">
 <link rel="preload" href="fonts/public-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/public-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/oswald-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {
@@ -18,7 +21,39 @@
       "name": "How much does a rental cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A used washer and dryer set is $50 a month. One machine, a washer or a dryer, is $35 a month. There is no big upfront cost."
+        "text": "A used washer and dryer set is $50 a month. One machine, a washer or a dryer, is $35 a month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the minimum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "4 months. Need it for less time? Text us to ask about shorter rentals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the deposit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "$50, due at installation. We return it at the end of your rental if there's no major damage to the machines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We send you an invoice through Stripe each month, by email or text."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I sign a contract?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, at installation. Want to read it first? Ask, and we'll send you a digital copy."
       }
     },
     {
@@ -26,15 +61,7 @@
       "name": "Is delivery and installation included?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In Colorado Springs, yes. We drop it off and hook it up for free. Outside the city, delivery is $50."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need good credit or a contract?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No credit check and no long-term commitment. It's month to month, so you can cancel anytime."
+        "text": "Yes. We drop it off and hook it up for free in Colorado Springs."
       }
     },
     {
@@ -42,7 +69,7 @@
       "name": "How soon can I get a washer and dryer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Delivery and installation are usually done the same week. Text us your name and address and we'll set it up."
+        "text": "We install between 5 and 7 PM, as early as Monday. Text us your name and address to set it up."
       }
     },
     {
@@ -50,15 +77,7 @@
       "name": "Do you serve my area?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We serve Colorado Springs and the surrounding area. Not sure if you're covered? Text us your address."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What if a machine has a problem?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Maintenance is free. We maintain the machines we rent."
+        "text": "We serve Colorado Springs only. Not sure if your address is in the city? Text it to us and we'll check."
       }
     },
     {
@@ -77,13 +96,13 @@
 
 <header class="site-header">
   <div class="wrap header-grid">
-    <a class="brand" href="/"><span class="mark" aria-hidden="true">G</span><span class="name">Gammill Global</span></a>
+    <a class="brand" href="/"><img class="logo" src="assets/photos/purely-global-logo-horizontal-dark.svg" width="250" height="44" alt="Purely Global home"></a>
     <nav class="nav" aria-label="Main">
       <a href="about.html">About</a>
       <a href="faq.html" aria-current="page">FAQ</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <a class="tel" href="sms:+17195550100">(719) 555-0100</a>
+    <a class="tel" href="sms:+17198279063?&amp;body=Hi%20Purely%20Global%21%20I%27m%20interested%20in%20renting.%20Here%20is%20my%20name%20and%20address%3A%0A">(719) 827-9063</a>
   </div>
 </header>
 
@@ -101,27 +120,35 @@
       <div class="faq">
         <details class="tile faq-item" open>
           <summary>How much does a rental cost?</summary>
-          <p>A used washer and dryer set is $50 a month. One machine, a washer or a dryer, is $35 a month. There is no big upfront cost.</p>
+          <p>A used washer and dryer set is $50 a month. One machine, a washer or a dryer, is $35 a month.</p>
+        </details>
+        <details class="tile faq-item">
+          <summary>What's the minimum?</summary>
+          <p>4 months. Need it for less time? <a href="sms:+17198279063?&amp;body=Hi%20Purely%20Global%21%20I%27m%20interested%20in%20renting%20for%20less%20than%204%20months.%20Here%20is%20my%20name%20and%20address%3A%0A">Text us</a> to ask about shorter rentals.</p>
+        </details>
+        <details class="tile faq-item">
+          <summary>What's the deposit?</summary>
+          <p>$50, due at installation. We return it at the end of your rental if there's no major damage to the machines.</p>
+        </details>
+        <details class="tile faq-item">
+          <summary>How do I pay?</summary>
+          <p>We send you an invoice through Stripe each month, by email or text.</p>
+        </details>
+        <details class="tile faq-item">
+          <summary>Do I sign a contract?</summary>
+          <p>Yes, at installation. Want to read it first? Ask, and we'll send you a digital copy.</p>
         </details>
         <details class="tile faq-item">
           <summary>Is delivery and installation included?</summary>
-          <p>In Colorado Springs, yes. We drop it off and hook it up for free. Outside the city, delivery is $50.</p>
-        </details>
-        <details class="tile faq-item">
-          <summary>Do I need good credit or a contract?</summary>
-          <p>No credit check and no long-term commitment. It's month to month, so you can cancel anytime.</p>
+          <p>Yes. We drop it off and hook it up for free in Colorado Springs.</p>
         </details>
         <details class="tile faq-item">
           <summary>How soon can I get a washer and dryer?</summary>
-          <p>Delivery and installation are usually done the same week. Text us your name and address and we'll set it up.</p>
+          <p>We install between 5 and 7 PM, as early as Monday. Text us your name and address to set it up.</p>
         </details>
         <details class="tile faq-item">
           <summary>Do you serve my area?</summary>
-          <p>We serve Colorado Springs and the surrounding area. Not sure if you're covered? Text us your address.</p>
-        </details>
-        <details class="tile faq-item">
-          <summary>What if a machine has a problem?</summary>
-          <p>Maintenance is free. We maintain the machines we rent.</p>
+          <p>We serve Colorado Springs only. Not sure if your address is in the city? Text it to us and we'll check.</p>
         </details>
         <details class="tile faq-item">
           <summary>What should I put in my text?</summary>
@@ -135,19 +162,19 @@
     <div class="wrap">
       <h2 id="cta-title">Text us to set up your rental</h2>
       <p>Send your name and address, and we will set up delivery.</p>
-      <a class="btn" href="sms:+17195550100?&amp;body=Hi%2C%20I%27m%20interested%20in%20renting%20a%20washer%20and%20dryer.%0AName%3A%0AAddress%3A">Text us</a>
-      <p><a href="contact.vcf" download="Gammill-Global.vcf">Save our number to your contacts</a></p>
-      <p>Hours: [HOURS]</p>
+      <a class="btn" href="sms:+17198279063?&amp;body=Hi%20Purely%20Global%21%20I%27m%20interested%20in%20renting.%20Here%20is%20my%20name%20and%20address%3A%0A">Text us</a>
+      <p>Or call <a href="tel:+17198279063">(719) 827-9063</a></p>
+      <p><a href="contact.vcf" download="Purely-Global.vcf">Save our number to your contacts</a></p>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
-    <p><strong>Gammill Global</strong>Washer and dryer rentals</p>
-    <p><strong>Text us</strong><a href="sms:+17195550100">(719) 555-0100</a><br><a href="contact.vcf" download="Gammill-Global.vcf">Save to contacts</a></p>
-    <p><strong>Service area</strong>Colorado Springs, CO and surrounding area</p>
-    <p><strong>Hours</strong>[HOURS]<br><a href="privacy.html">Privacy</a></p>
+    <div class="footer-brand"><img class="logo" src="assets/photos/purely-global-logo-lockup-light.svg" width="168" height="96" loading="lazy" alt="Purely Global"><p>Washer &amp; dryer rentals</p></div>
+    <p><strong>Text or call</strong><a href="tel:+17198279063">(719) 827-9063</a><br><a href="contact.vcf" download="Purely-Global.vcf">Save to contacts</a></p>
+    <p><strong>Service area</strong>Colorado Springs, CO</p>
+    <p><strong>Installation hours</strong>5–7 PM<br><a href="privacy.html">Privacy</a></p>
   </div>
 </footer>
 

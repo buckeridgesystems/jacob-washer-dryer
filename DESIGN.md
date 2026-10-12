@@ -40,40 +40,38 @@ Send Hunter one intake message that covers every missing item below and the asse
   5. Do you come to my area? (listings: "Serving all of Colorado Springs & surrounding areas")
 - **Placeholders:** (each unconfirmed value, with the exact string used on the site)
 
-  | Value | Exact string | Where it appears |
-  |---|---|---|
-  | Business name | `Gammill Global` | Every page: title, header, footer, About, meta; also `contact.vcf` (FN and ORG) |
-  | Phone | `(719) 555-0100` visible; `+17195550100` in every `sms:` link and in `contact.vcf` | Header, footer, every page |
-  | Hours | `[HOURS]` | Footer on every page, closing band (`Hours: [HOURS]`), Contact |
-  | Owner name | `[OWNER NAME]` | About |
-  | Owner story | `[OWNER STORY: two or three sentences from the owner, in his own words.]` | About |
-  | Privacy policy | `[PRIVACY POLICY: placeholder. The owner should confirm or replace this wording before launch.]` | Privacy |
+  **Rebrand, 2026-10-12 (Hunter's brief):** business name **Purely Global**, phone **(719) 827-9063** (`+17198279063` in every `tel:` and `sms:` link and in `contact.vcf`; download name `Purely-Global.vcf`), owner **Jacob Gammill**. Both name and phone come from the sign and are still on the open-questions list for Jacob to confirm.
 
-  Not yet unified: the contact-card download name is `Gammill-Global.vcf` (hyphen) while the site uses `Gammill Global`. One more find-and-replace at handoff.
+  | Value | Status on the site | Where |
+  |---|---|---|
+  | Business hours | Not supplied. Footer shows installation hours (5–7 PM) instead | Footer |
+  | Owner story | Meet the owner section removed (Hunter, 2026-10-12) | About |
+  | 1–3 month rates | Not published: "Need it for less time? Text us to ask about shorter rentals." (Text us links to sms) | Home, FAQ, About |
+  | Privacy wording | Placeholder line removed; Stripe invoice paragraph added; an HTML comment asks the owner to confirm | Privacy |
 - **Claims:** (each time, count, price, or guarantee claim, with its source)
 
   | Claim | Source |
   |---|---|
-  | $50 a month for a washer and dryer set | Marketplace listing ("Rent a washer and dryer for just $50 a month") |
-  | $35 a month for a single washer or dryer | Marketplace listing ("Washer OR Dryer Rental, $35/Month") |
-  | Free delivery and installation in Colorado Springs | Marketplace listings |
-  | $50 delivery outside Colorado Springs | Marketplace listing; Hunter: "It's fine" (another listing says "surrounding areas" without a fee) |
-  | Usually delivered and installed the same week | Marketplace listing ("usually the same week"); Hunter: keep it |
-  | No credit check | Marketplace listings |
-  | Month to month, cancel anytime | Marketplace listings |
-  | Owner maintains the machines he rents | Marketplace listing ("free delivery, installation, and maintenance"); Hunter notes |
+  | $50 a month for a washer and dryer set, 4-month minimum | Jacob's standard reply to new clients (Hunter's brief, 2026-10-12) |
+  | $35 a month for a single washer or dryer, 4-month minimum | Jacob's reply |
+  | $50 refundable deposit at installation, returned if no major damage | Jacob's reply |
+  | Free delivery and installation in Colorado Springs | Jacob's reply; Marketplace listings |
+  | Installation as early as Monday | Jacob's reply |
+  | Installation hours 5–7 PM | Hunter, 2026-10-12 |
+  | Service area is Colorado Springs only | Hunter, 2026-10-12. Replaces "and surrounding area" and the outside-city delivery question |
+  | Monthly invoices through Stripe, by email or text | Jacob's reply |
+  | Contract signed at installation; digital copy on request | Jacob's reply |
   | Machines are used | Hunter, listings ("Used - like new") |
-  | No big upfront cost | Marketplace listing ("No huge upfront cost, no hassle"). Used on the FAQ page |
-  | No long-term commitment | Marketplace listing ("No long-term commitment"). Used on the FAQ page |
-  | Maintenance is free | Marketplace listing ("free delivery, installation, and maintenance"). Used on the FAQ page |
   | "We drop it off and hook it up" | Marketplace listing, owner's own phrasing ("We drop it off, hook it up"). Used on the FAQ page |
   | Both reviews are 5 stars | Hunter ("both 5 stars, copy/paste didn't capture that") |
   | Review dates: July 30, 2026 (DeeTha), February 16, 2026 (Mikel) | Review text as pasted by Hunter |
 
+  **Removed 2026-10-12**, because they conflict with the 4-month minimum or aren't in Jacob's reply: month to month, cancel anytime, no credit check, no long-term commitment, no big upfront cost, usually the same week, $50 delivery outside the city, "we maintain the machines we rent" and free maintenance. Ask Jacob before putting maintenance back.
+
 **Notes from Hunter:**
 - Machines are used, mostly Whirlpool, but brand is not a selling point. Don't feature it.
 - Owner rents only his own machines. He does not repair other people's machines, so don't imply repair for the public.
-- Phone number is a dummy (`555-01xx` range) until the owner supplies a real one.
+- ~~Phone number is a dummy (`555-01xx` range) until the owner supplies a real one.~~ Replaced 2026-10-12 with (719) 827-9063 from the sign.
 
 ### Step 2: Brand colors (stop and ask)
 
@@ -90,26 +88,26 @@ Then:
 
 Record the final palette:
 
-- **Ground:** `#FFFFFF` white (green `#367C2B` is allowed as a full-width band, with white text only)
-- **Text:** `#1A1A1A` near-black on white and on yellow; `#FFFFFF` on green
-- **Primary action:** `#FFDE00` yellow button with `#1A1A1A` text (13.0:1). Reserved for the text/call button. Sits on a green band, or has a 2px `#1A1A1A` border on white, because yellow vs white is only 1.34:1.
-- **Supporting (optional):** `#367C2B` green for headings, bands, and links (5.15:1 on white). `#2A5E21` dark green if a darker tone is needed (7.72:1 on white). `#EDF4EB` pale green tint, used only as an alternating section background (ink 15.5:1, dark green 6.9:1 on it). Added in the polish pass.
-- **Source:** client brand, "John Deere green and yellow". Hex values are the commonly published approximations, not from a brand file. Confirm or replace.
+- **Source:** the Purely Global sign and poster (`IMG_3438.PNG`, `purely_global_sign_24x18.pdf`), via Hunter's brief, 2026-10-12. Replaces the earlier John Deere green and yellow.
+- **Ground:** `#FFFFFF` white; `#F1F9EA` pale mint tint for alternating sections and tiles.
+- **Primary green (hero, page heroes, closing band, footer):** `#4B8468`, set by Hunter on 2026-10-12. **White on it is 4.38:1, below the 4.5 AA minimum for body text** (hero subhead, closing band text, footer). It passes for large text (24px+, or 18.66px+ bold). An earlier pass used `#4A8068` (white 4.59). The logo files keep `#4E876D`.
+- **Deep green:** `#2F5246`, for headings and links on white (8.69), text on gold (4.77), step numerals, and photo mats.
+- **Mint:** `#E1F8D0` (set by Hunter), for the footer rule and large text only (the closing heading). The logo files keep `#DCF1CA`. It's 3.86:1 on the green, which passes for large text only.
+- **Primary action:** `#F4B640` (set by Hunter) gold pill button with `#2F5246` text (4.81) and a 2px `#2F5246` border, because gold on white is only 1.82.
+- **Text:** `#1A1A1A` on white and tint; `#FFFFFF` on green.
 
 Contrast checks (WCAG ratios):
 
 | Pair | Ratio | Result |
 |---|---|---|
-| `#FFFFFF` on `#367C2B` | 5.15 | Pass |
-| `#367C2B` on `#FFFFFF` | 5.15 | Pass |
-| `#1A1A1A` on `#FFDE00` | 13.01 | Pass |
-| `#FFDE00` on `#2A5E21` | 5.77 | Pass |
-| `#FFDE00` on `#367C2B` | 3.85 | **Fails 4.5 as text.** OK only for large text (24px+) or non-text UI. |
-| `#367C2B` on `#FFDE00` | 3.85 | **Fails 4.5 as text.** Use `#1A1A1A` on yellow instead. |
-| `#1A1A1A` on `#367C2B` | 3.38 | **Fails.** Use white on green. |
-| `#FFDE00` on `#FFFFFF` | 1.34 | **Fails.** Never use yellow as text or a borderless shape on white. |
-
-Trademark note: use the colors only. No John Deere name, logo, leaping deer, or "Nothing Runs Like" phrasing anywhere on the site.
+| `#FFFFFF` on `#4B8468` | 4.38 | **Fails 4.5 for body text.** Passes for large text. Set by Hunter. |
+| `#FFFFFF` on `#4E876D` (brand, unadjusted) | 4.19 | **Fails 4.5.** This is why the green was nudged. |
+| `#E1F8D0` on `#4B8468` | 3.86 | Large text and graphics only |
+| `#2F5246` on `#F4B640` | 4.81 | Pass |
+| `#2F5246` on `#FFFFFF` | 8.69 | Pass |
+| `#2F5246` on `#F1F9EA` | 8.06 | Pass |
+| `#1A1A1A` on `#F1F9EA` | 16.14 | Pass |
+| `#F4B640` on `#FFFFFF` | 1.81 | **Fails.** The button always has the deep green border. |
 
 ### Step 3: Type (stop and ask)
 
@@ -124,7 +122,8 @@ Make the options clearly different from each other, for example: a sturdy sans, 
 
 **Stop and wait for Hunter to pick one.**
 
-- **Type picked:** Public Sans, one family, confirmed by Hunter ("leave the original in"). Hunter first called it too casual, was shown three alternatives in direction C (`directions/type-option-1.html` IBM Plex Sans, `type-option-2.html` Archivo, `type-option-3.html` Source Serif 4 with Source Sans 3), then chose to keep Public Sans. Details: 800 for headings, 600 for subheadings and buttons, 400 for body. Body 17px, line height 1.55, measure capped at 65ch. Google Fonts, SIL Open Font License. Self-host woff2 in `/fonts` with the license for the final build. Chosen by Claude at Hunter's direction ("pick one that makes sense"); only one option was rendered. Specimen: `specimen-type.html`.
+- **Type picked (2026-10-12):** Oswald 600, uppercase, for h1, h2, prices, and step numerals. It's a condensed bold sans like the poster headline, as Hunter's brief asked ("similar to Bebas Neue / Oswald"). Public Sans stays for everything else (400 body, 600 subheads, 800 for h3 and buttons). Both are SIL Open Font License and self-hosted in `/fonts` with their licenses (Oswald from Fontsource 5.3.0). No alternatives were rendered: Hunter said "Continue" after being told type was still open. History below.
+- **Previously:** Public Sans, one family, confirmed by Hunter ("leave the original in"). Hunter first called it too casual, was shown three alternatives in direction C (`directions/type-option-1.html` IBM Plex Sans, `type-option-2.html` Archivo, `type-option-3.html` Source Serif 4 with Source Sans 3), then chose to keep Public Sans. Details: 800 for headings, 600 for subheadings and buttons, 400 for body. Body 17px, line height 1.55, measure capped at 65ch. Google Fonts, SIL Open Font License. Self-host woff2 in `/fonts` with the license for the final build. Chosen by Claude at Hunter's direction ("pick one that makes sense"); only one option was rendered. Specimen: `specimen-type.html`.
 
 ### Step 4: Directions (stop and ask)
 
@@ -137,20 +136,21 @@ Don't build any pages yet. **Stop and wait for Hunter to pick one or ask for cha
 
 - **Direction picked:** C, photo-led. Green header bar, headline and button on the left, 4:3 photo on the right (below the button on phones). Mockup: `directions/direction-c.html`.
 - **Spacing scale:** 8, 16, 24, 40, 64, 104
-- **The one distinctive idea (if any) and where it comes from:** None. The text button opens a message with "Hi, I'd like to rent a washer and dryer" pre-filled, a convenience that comes from his text-first way of getting customers.
+- **The one distinctive idea (if any) and where it comes from:** None. Every text link opens a message pre-filled with "Hi Purely Global! I'm interested in renting. Here is my name and address:" (links next to the 4-month minimum say "renting for less than 4 months"), a convenience that comes from his text-first way of getting customers.
 
 ### Step 5: Page plan
 
-- **Pages:** Home (one page). Privacy (short, required by the footer rule; placeholder text until the owner supplies policy wording).
+- **Pages:** Home, About, FAQ, Contact, Privacy.
 - **Homepage section order, with the purpose of each section:**
   1. **Header bar:** business name and tappable phone number, so the number is always visible.
   2. **First screen (direction C):** headline, "Text us" button with pre-filled message, call link, photo. Purpose: let someone text in under five seconds.
-  3. **Rental prices:** $50 set, $35 single unit, plus what is included (no credit check, month to month, maintenance). Answers question 1 in full and question 3.
-  4. **Where we deliver:** Colorado Springs and the surrounding area; free delivery and installation in the city, usually the same week; $50 outside. Answers questions 2, 4, and 5. Moved up from the bottom in the copy pass.
-  5. **Reviews:** two real Facebook reviews, verbatim. Trust, after the questions are answered.
-  6. **Our machines:** real photos (washer, dryer, set). No inventory claims, because Hunter does not want an "available" list. Moved down: it answers none of the top questions.
-  7. **Closing text:** the same button and number, plus `[HOURS]`. Purpose: the final prompt after reading.
-  8. **Footer:** name, phone, service area, hours, privacy link. Nothing decorative.
+  3. **Rental prices:** $50 set and $35 single unit, each with the 4-month minimum, plus "Good to know": free delivery and installation in Colorado Springs, the $50 refundable deposit, and "ask about 1–3 month rates."
+  4. **How it works (added 2026-10-12):** text us, we reply, install as early as Monday, contract and deposit at install, monthly Stripe invoices.
+  5. **Where we deliver:** Colorado Springs only; delivery and installation free.
+  6. **Reviews:** two real Facebook reviews, verbatim. Trust, after the questions are answered.
+  7. **Our machines:** real photos (washer, dryer, set). No inventory claims, because Hunter does not want an "available" list.
+  8. **Closing text:** the same button, a call link, and the save-contact link. Hours removed until supplied.
+  9. **Footer:** stacked mint lockup, phone, service area, privacy link. Hours removed until supplied.
 - **Form fields:** None. The primary action is a tap-to-text link (`sms:`) with call as the second option, as Hunter specified.
 
 Show this to Hunter, then build.
@@ -159,9 +159,12 @@ Show this to Hunter, then build.
 
 - [ ] Every Part 2 rule checked, with any exceptions listed and explained
   - **Exception, Part 2 §3 (no scroll-triggered animation):** the sticky header slides away on scroll down and returns on scroll up (`public/js/header.js`, 0.2s, disabled under `prefers-reduced-motion`, visible without JavaScript). Requested by Hunter.
-  - **Exception, Part 2 §6 (contrast):** the header's yellow bottom border is decorative, not text or a control, and is 1.34:1 against white. Intentional.
-  - **Exception, Part 2 §2 (no themed decoration):** the "Included" list uses a small washing-machine icon as its bullet, an authored SVG in the dark green. Requested by Hunter.
-  - **Built:** About, FAQ, and Contact pages exist (FAQ replaced Services, which duplicated the home page; accordions are native `<details>`, no JavaScript) and share the header, hero band, tiles, photo mat, washer bullets, and closing band with the home page. Open placeholders on them: `[OWNER NAME]`, `[OWNER STORY]`, `[HOURS]`.
+  - **Exception, Part 2 §6 (contrast):** the header's gold bottom border is decorative, not text or a control (1.82:1 against white). Intentional.
+  - **Exception, Part 2 §6 (footer hours):** hours are removed from the footer until Jacob supplies them (Hunter's brief: "remove or get hours").
+  - **Exception, Part 2 §2 (no themed decoration):** the "Good to know" list uses a small washing-machine icon as its bullet, an authored SVG in the deep green. Requested by Hunter.
+  - **Built:** About, FAQ, and Contact pages exist (FAQ replaced Services, which duplicated the home page; accordions are native `<details>`) and share the header, hero band, tiles, photo mat, washer bullets, and closing band with the home page.
+  - **Logo (2026-10-12):** the supplied lockup PNGs were clipped (the wordmark read "ELY GLO"). Rebuilt from the vector logo in Jacob's `purely_global_sign_24x18.pdf`, with the artwork unchanged: stacked lockups (`purely-global-logo-lockup-{dark,light,white}.svg` and `.png`) and a horizontal arrangement for the header (`purely-global-logo-horizontal-{dark,light}.svg`: the mark, plus the wordmark scaled to 1/2.6 of the mark's height). The clipped originals are in `public/assets/photos/archive/`.
+  - **Detector false positive:** the static scan (`npx impeccable detect public`) flags the mint on green (`#E1F8D0` on `#4B8468`, 3.86:1) on index, about, and faq. That's the closing h2, at 36px or larger, which is large text (3:1 needed). The served-page scan doesn't flag it.
 - [ ] Screenshots at 360px, 390px, 576px, 768px, 992px, 1200px, and 1440px
 - [ ] Every placeholder listed for Hunter
 - [ ] Every stock photo listed with its source, and marked for replacement before delivery
