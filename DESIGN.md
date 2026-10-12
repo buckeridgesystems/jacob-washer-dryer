@@ -63,6 +63,10 @@ Send Hunter one intake message that covers every missing item below and the asse
   | Month to month, cancel anytime | Marketplace listings |
   | Owner maintains the machines he rents | Marketplace listing ("free delivery, installation, and maintenance"); Hunter notes |
   | Machines are used | Hunter, listings ("Used - like new") |
+  | No big upfront cost | Marketplace listing ("No huge upfront cost, no hassle"). Used on the FAQ page |
+  | No long-term commitment | Marketplace listing ("No long-term commitment"). Used on the FAQ page |
+  | Maintenance is free | Marketplace listing ("free delivery, installation, and maintenance"). Used on the FAQ page |
+  | "We drop it off and hook it up" | Marketplace listing, owner's own phrasing ("We drop it off, hook it up"). Used on the FAQ page |
   | Both reviews are 5 stars | Hunter ("both 5 stars, copy/paste didn't capture that") |
   | Review dates: July 30, 2026 (DeeTha), February 16, 2026 (Mikel) | Review text as pasted by Hunter |
 
@@ -157,7 +161,7 @@ Show this to Hunter, then build.
   - **Exception, Part 2 §3 (no scroll-triggered animation):** the sticky header slides away on scroll down and returns on scroll up (`js/header.js`, 0.2s, disabled under `prefers-reduced-motion`, visible without JavaScript). Requested by Hunter.
   - **Exception, Part 2 §6 (contrast):** the header's yellow bottom border is decorative, not text or a control, and is 1.34:1 against white. Intentional.
   - **Exception, Part 2 §2 (no themed decoration):** the "Included" list uses a small washing-machine icon as its bullet, an authored SVG in the dark green. Requested by Hunter.
-  - **Built:** About, Services, and Contact pages exist and share the header, hero band, tiles, photo mat, washer bullets, and closing band with the home page. Open placeholders on them: `[OWNER NAME]`, `[OWNER STORY]`, `[HOURS]`.
+  - **Built:** About, FAQ, and Contact pages exist (FAQ replaced Services, which duplicated the home page; accordions are native `<details>`, no JavaScript) and share the header, hero band, tiles, photo mat, washer bullets, and closing band with the home page. Open placeholders on them: `[OWNER NAME]`, `[OWNER STORY]`, `[HOURS]`.
 - [ ] Screenshots at 360px, 390px, 576px, 768px, 992px, 1200px, and 1440px
 - [ ] Every placeholder listed for Hunter
 - [ ] Every stock photo listed with its source, and marked for replacement before delivery

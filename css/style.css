@@ -190,7 +190,7 @@ p { max-width: var(--measure); }
 /* Bullet is a small front-loading washer, drawn as SVG (stroke #2A5E21) */
 .list li {
   position: relative;
-  padding-left: 44px;
+  padding-left: 36px;
   font-size: 1.375rem;
   line-height: 1.35;
   font-weight: 600;
@@ -199,11 +199,44 @@ p { max-width: var(--measure); }
   content: "";
   position: absolute;
   left: 0;
-  top: 0.1em;
-  width: 28px;
-  height: 28px;
+  top: 0.17em;
+  width: 22px;
+  height: 22px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='none' stroke='%232A5E21' stroke-width='2'%3E%3Crect x='4' y='2' width='20' height='24' rx='2'/%3E%3Ccircle cx='14' cy='16' r='6'/%3E%3Ccircle cx='9' cy='6.5' r='1' fill='%232A5E21' stroke='none'/%3E%3Cline x1='13' y1='6.5' x2='20' y2='6.5'/%3E%3C/svg%3E") center / contain no-repeat;
 }
+
+/* FAQ accordions: native details/summary, plus and minus drawn with two bars */
+.faq { display: grid; gap: var(--s2); max-width: 52rem; }
+.faq .faq-item { padding: 0; overflow: hidden; cursor: pointer; }
+.faq-item summary {
+  position: relative;
+  display: block;
+  min-height: 56px;
+  padding: var(--s3) 72px var(--s3) var(--s3);
+  font-size: 1.375rem;
+  line-height: 1.3;
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::before,
+.faq-item summary::after {
+  content: "";
+  position: absolute;
+  right: var(--s3);
+  top: 50%;
+  width: 20px;
+  height: 3px;
+  background: var(--green-dark);
+  transform: translateY(-50%);
+}
+.faq-item summary::after { transform: translateY(-50%) rotate(90deg); }
+/* Plus returns the moment closing starts, not when the animation ends */
+.faq-item[open]:not(.is-closing) summary::after { display: none; }
+.faq-item summary:hover { color: var(--green-dark); }
+.faq-item summary:focus-visible { outline: 3px solid var(--green); outline-offset: -3px; }
+.faq-item p { padding: 0 var(--s3) var(--s3); }
 
 /* Numbered steps: square numerals echo the header mark */
 .steps { list-style: none; padding: 0; counter-reset: step; display: grid; gap: var(--s3); }
