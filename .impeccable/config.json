@@ -16,7 +16,7 @@
         "rule": "overused-font",
         "value": "arial",
         "files": [
-          "intro.html"
+          "public/intro.html"
         ],
         "createdAt": "2026-10-12T00:51:52.975Z",
         "reason": "Claude: intro.html is a deliberately bland prank page; Hunter asked for it to be 'bland as can be', so a default system font is intended. Not part of the client site design."

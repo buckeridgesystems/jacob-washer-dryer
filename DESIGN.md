@@ -158,7 +158,7 @@ Show this to Hunter, then build.
 ### Step 6: Before handing back
 
 - [ ] Every Part 2 rule checked, with any exceptions listed and explained
-  - **Exception, Part 2 §3 (no scroll-triggered animation):** the sticky header slides away on scroll down and returns on scroll up (`js/header.js`, 0.2s, disabled under `prefers-reduced-motion`, visible without JavaScript). Requested by Hunter.
+  - **Exception, Part 2 §3 (no scroll-triggered animation):** the sticky header slides away on scroll down and returns on scroll up (`public/js/header.js`, 0.2s, disabled under `prefers-reduced-motion`, visible without JavaScript). Requested by Hunter.
   - **Exception, Part 2 §6 (contrast):** the header's yellow bottom border is decorative, not text or a control, and is 1.34:1 against white. Intentional.
   - **Exception, Part 2 §2 (no themed decoration):** the "Included" list uses a small washing-machine icon as its bullet, an authored SVG in the dark green. Requested by Hunter.
   - **Built:** About, FAQ, and Contact pages exist (FAQ replaced Services, which duplicated the home page; accordions are native `<details>`, no JavaScript) and share the header, hero band, tiles, photo mat, washer bullets, and closing band with the home page. Open placeholders on them: `[OWNER NAME]`, `[OWNER STORY]`, `[HOURS]`.
