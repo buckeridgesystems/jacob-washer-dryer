@@ -13,16 +13,58 @@ Claude Code: read the whole file before starting. Work through Part 1 in order, 
 
 ### Step 1: Facts
 
-Ask Hunter for anything missing here before going further.
+Send Hunter one intake message that covers every missing item below and the asset list. Don't go further until it's answered.
 
-- **Business name:** Gammill Global (placeholder until the owner confirms the real name; find and replace site-wide)
-- **What they do (one sentence):** Rents used washers and dryers month to month, and delivers, installs, and maintains the machines he rents out. (Delivery confirmed from his Marketplace listings.)
-- **Service area:** Greater Colorado Springs, CO, within about a 30-minute drive. Do not name the exact origin address or street.
-- **Primary visitor:** Someone in the Colorado Springs area who needs to rent a washer and dryer, arriving on a phone. Currently finds the owner through Facebook Marketplace.
-- **Primary action:** Text (call also works). No form. Needs information and a quick way to reach him.
-- **Tier:** Foundation (just the site). Note: not one of the template tiers; confirm which it maps to.
-- **Real assets supplied:** Photos of his machines from Marketplace listings (`assets/photos/`), prices and terms copied from his listings ($50/month set, $35/month single unit, free delivery and install in Colorado Springs, no credit check, month to month), and two real Facebook reviews (DeeTha, July 30, 2026; Mikel, February 16, 2026). Everything else is filler.
-- **Missing assets:** Logo, real business name, photos of the machines, real phone number, hours, reviews, rental pricing and terms, delivery and install details, license or insurance info if any.
+**Assets to request, all in one message:**
+- Photos of the business or product, sent as originals (not screenshots)
+- Reviews, as pasted text
+- Listing text, as pasted text, if the business has listings
+- Logo, if any
+- Hours and phone number
+- How the owner describes the work, in their own words (a few sentences, or a voice memo transcript)
+- The questions customers ask most before hiring
+
+- **Business name:**
+- **What they do (one sentence):**
+- **Service area:**
+- **Primary visitor:** (who arrives, on what device, in what situation)
+- **Primary action:** (text / call / quote request / booking / visit)
+- **Tier:** (Foundation only / Starter Presence / Growth Engine / Full Stack Partner). Foundation only means the site and the Foundation package, with no tier add-ons.
+- **Real assets supplied:** (logo, photos, reviews, licenses, hours)
+- **Missing assets:**
+- **Top customer questions:** (these set the homepage section order). **Proposed, not confirmed by the owner.** Based on his Marketplace listings and the two reviews.
+  1. How much is it per month? (listings lead with the price; review: "Great rate")
+  2. Is delivery and installation included, and what does it cost? (listings: free in Colorado Springs, $50 outside; review: "GET INSTALLED TODAY")
+  3. Is there a credit check or a contract? (listings: "No credit check", "Cancel anytime")
+  4. How soon can I get it? (listing: "usually the same week"; review: "BOOK TODAY")
+  5. Do you come to my area? (listings: "Serving all of Colorado Springs & surrounding areas")
+- **Placeholders:** (each unconfirmed value, with the exact string used on the site)
+
+  | Value | Exact string | Where it appears |
+  |---|---|---|
+  | Business name | `Gammill Global` | Every page: title, header, footer, About, meta; also `contact.vcf` (FN and ORG) |
+  | Phone | `(719) 555-0100` visible; `+17195550100` in every `sms:` link and in `contact.vcf` | Header, footer, every page |
+  | Hours | `[HOURS]` | Footer on every page, closing band (`Hours: [HOURS]`), Contact |
+  | Owner name | `[OWNER NAME]` | About |
+  | Owner story | `[OWNER STORY: two or three sentences from the owner, in his own words.]` | About |
+  | Privacy policy | `[PRIVACY POLICY: placeholder. The owner should confirm or replace this wording before launch.]` | Privacy |
+
+  Not yet unified: the contact-card download name is `Gammill-Global.vcf` (hyphen) while the site uses `Gammill Global`. One more find-and-replace at handoff.
+- **Claims:** (each time, count, price, or guarantee claim, with its source)
+
+  | Claim | Source |
+  |---|---|
+  | $50 a month for a washer and dryer set | Marketplace listing ("Rent a washer and dryer for just $50 a month") |
+  | $35 a month for a single washer or dryer | Marketplace listing ("Washer OR Dryer Rental, $35/Month") |
+  | Free delivery and installation in Colorado Springs | Marketplace listings |
+  | $50 delivery outside Colorado Springs | Marketplace listing; Hunter: "It's fine" (another listing says "surrounding areas" without a fee) |
+  | Usually delivered and installed the same week | Marketplace listing ("usually the same week"); Hunter: keep it |
+  | No credit check | Marketplace listings |
+  | Month to month, cancel anytime | Marketplace listings |
+  | Owner maintains the machines he rents | Marketplace listing ("free delivery, installation, and maintenance"); Hunter notes |
+  | Machines are used | Hunter, listings ("Used - like new") |
+  | Both reviews are 5 stars | Hunter ("both 5 stars, copy/paste didn't capture that") |
+  | Review dates: July 30, 2026 (DeeTha), February 16, 2026 (Mikel) | Review text as pasted by Hunter |
 
 **Notes from Hunter:**
 - Machines are used, mostly Whirlpool, but brand is not a selling point. Don't feature it.
@@ -99,11 +141,11 @@ Don't build any pages yet. **Stop and wait for Hunter to pick one or ask for cha
 - **Homepage section order, with the purpose of each section:**
   1. **Header bar:** business name and tappable phone number, so the number is always visible.
   2. **First screen (direction C):** headline, "Text us" button with pre-filled message, call link, photo. Purpose: let someone text in under five seconds.
-  3. **Rental prices:** $50 set, $35 single unit, plus what is included. Purpose: answer the first question people ask. The old "What we do" list was folded into the Included list.
-  4. **Our machines:** three real photos (washer, dryer, garage stock). Hunter does not want an "available" list, so no inventory claims.
-  5. **Reviews:** two real Facebook reviews, verbatim.
-  6. **Service area:** Colorado Springs and the surrounding area; free delivery in the city, $50 outside (see open items).
-  7. **Closing text/call:** the same button and number, plus `[HOURS]`. Purpose: the final prompt after reading.
+  3. **Rental prices:** $50 set, $35 single unit, plus what is included (no credit check, month to month, maintenance). Answers question 1 in full and question 3.
+  4. **Where we deliver:** Colorado Springs and the surrounding area; free delivery and installation in the city, usually the same week; $50 outside. Answers questions 2, 4, and 5. Moved up from the bottom in the copy pass.
+  5. **Reviews:** two real Facebook reviews, verbatim. Trust, after the questions are answered.
+  6. **Our machines:** real photos (washer, dryer, set). No inventory claims, because Hunter does not want an "available" list. Moved down: it answers none of the top questions.
+  7. **Closing text:** the same button and number, plus `[HOURS]`. Purpose: the final prompt after reading.
   8. **Footer:** name, phone, service area, hours, privacy link. Nothing decorative.
 - **Form fields:** None. The primary action is a tap-to-text link (`sms:`) with call as the second option, as Hunter specified.
 
@@ -142,12 +184,52 @@ Don't decorate the page with the trade. That means no roofline shapes, pipe or w
 
 ### 4. Copy
 
-- Plain and specific. Say what the business does, where, and how to reach them.
+Visitors scan rather than read. Write for someone on a phone who wants one answer and a way to reach the business.
+
+**Structure**
+- Order the homepage by the visitor's questions (Step 1, Top customer questions). Answer the most-asked one on the first screen.
+- Headings say what the section tells the visitor. A plain label is fine when the content below is short and obvious, such as Reviews or Hours.
+- Front-load. The first two or three words of every heading, list item, and paragraph carry the meaning.
+- Use a list for three or more parallel items. Write numbers as digits.
+
+**Length**
+- One idea per sentence. Keep most sentences under 20 words, and paragraphs to one to three sentences.
+- Cut any line that doesn't help the visitor decide or act.
+- Each fact appears once, in the section where it answers a question. The phone number and the primary action are the exceptions, and they repeat.
+
+**Every line carries a fact**
+- Each line gives the visitor something usable: a price, a place, a time, a service, or a condition.
+- Test: could a visitor check it or act on it? A line that states a price, place, time, service, or condition passes, even if competitors could say the same. A line that is only adjectives or a promise of a feeling ("quality you can count on," "service that goes above and beyond") fails. Rewrite it with a fact from intake, or cut it. Headings, buttons, and labels are exempt.
+  - Weak: "Quality service you can count on." Strong: "We maintain every machine we rent."
+  - Weak: "Fast, reliable plumbing." Strong: "Licensed plumber in Tyler and Longview. Same-day visits when you call before noon."
+- No praise words (best, top-rated, premier, quality, trusted, reliable) unless a fact on the same line backs them.
+- Use plain, common words, at roughly a 5th to 7th grade reading level. Avoid long or uncommon words where a short one works. Use the words customers use, taken from intake, listings, and reviews.
+
+**Voice**
+- Write as the owner talking to a customer. Use "we" and "you." Contractions are fine.
+- Borrow the client's own phrasing from intake and listings when it's clear and specific.
 - No fear framing ("Disaster struck?"), no tough-guy slogans, no hype words (elevate, unleash, seamless, transform, cutting-edge).
 - No em dashes.
+
+**Buttons and links**
+- Buttons use the verb of the action: Call, Text us, Get a quote, Book.
+- Avoid labels that don't say what happens: Get started, Learn more, Submit, Click here.
+- Link text makes sense on its own.
+
+**Honesty**
 - Never invent facts. No made-up statistics, years in business, review counts, certifications, warranties, awards, or outcomes. Anything not supplied by the client is a clearly marked placeholder: `[YEARS IN BUSINESS]`.
+- Time, count, price, and guarantee claims come only from the client's own words, listings, or posts. Record each in Step 1 under Claims.
 - Never promise results: no lead counts, rankings, savings, or insurance outcomes.
-- Reviews: real reviews only on live client sites. Until real ones exist, and on Buckeridge demo sites, review text is lorem ipsum with a placeholder name like `[CUSTOMER NAME]`. Never write a realistic-sounding fake review.
+
+**Reviews**
+- Real reviews only on live client sites. Until real ones exist, and on Buckeridge demo sites, review text is lorem ipsum with a placeholder name like `[CUSTOMER NAME]`. Never write a realistic-sounding fake review.
+- Show reviews exactly as written, including the reviewer's spelling and capitalization. Never polish them.
+- Put detailed reviews first, and show the date.
+- Reviewer names: show first name and last initial unless the client confirms that full names are public on their profile.
+
+**Placeholders**
+- Every unconfirmed value (business name, phone, hours, email) is recorded once in Step 1 under Placeholders, with the exact string used on the site. Use that exact string everywhere, so handoff is one find-and-replace per value.
+- Dummy phone numbers use the client's area code with a number from 555-0100 to 555-0199, the range reserved for fictional use.
 
 ### 5. Photos
 
