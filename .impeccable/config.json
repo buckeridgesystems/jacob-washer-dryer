@@ -11,6 +11,15 @@
         ],
         "createdAt": "2026-10-11T18:15:23.059Z",
         "reason": "Claude: 8 of 10 spacing values counted are the 4px gaps/padding in the throwaway review-nav bar; the page's own spacing uses the 8/16/24/40/64/104 scale. Direction B is a non-chosen draft and the bar is removed at build."
+      },
+      {
+        "rule": "overused-font",
+        "value": "arial",
+        "files": [
+          "intro.html"
+        ],
+        "createdAt": "2026-10-12T00:51:52.975Z",
+        "reason": "Claude: intro.html is a deliberately bland prank page; Hunter asked for it to be 'bland as can be', so a default system font is intended. Not part of the client site design."
       }
     ]
   }
